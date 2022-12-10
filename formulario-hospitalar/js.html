@@ -1,0 +1,34 @@
+<script>
+let idade, nome, vezes
+let quantidademedicamentos, quantidadeparaopaciente
+let itemMenu
+
+itemMenu = prompt("O que você gostaria de acessar? 1 - Cadastro, 2 - controle de estoque")
+if (itemMenu==1){
+
+idade = prompt("qual a idade do paciente?")
+nome = prompt("qual nome do paciente?")
+vezes = prompt ("quantas vezes o paciente foi ao medico?")
+
+quantidadeparaopaciente = prompt("quantos medicamentos pretende dar ao paciente?")
+
+if(vezes>5){
+console.log("esse paciente é um caso urgente")
+}else if(idade>60){
+  console.log("esse parciente é um caso urgente!")
+}else{
+  console.log("esse paciente Não é um caso urgente")
+}
+console.log("a idade do parciente é?" + idade)
+console.log("o nome do paciente é?" + nome)
+console.log("o paciente foi ao medico ?" + vezes + "vezes")
+}
+else if("intemMenu==2"){
+  quantidademedicamentos = prompt("quantos medicamentos tem em estoque?")
+  while (quantidademedicamentos > 0){
+    quantidadeparaopaciente = prompt("quantos medicamentos tem em estoque?")
+    quantidademedicamentos=quantidademedicamentos-quantidadeparaopaciente
+    console.log("quantos medicametos restantes" + quantidademedicamentos)
+  }
+}
+</script>
